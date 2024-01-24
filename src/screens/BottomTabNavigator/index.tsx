@@ -4,14 +4,16 @@ import {
     createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
 import HomeScreen from 'screens/HomeScreen';
-import LoungeScreen from 'screens/LoungeScreen';
-import ProfileScreen from 'screens/ProfileScreen';
 import CustomBottomTab from './components/CustomBottomTab';
+import WalletScreen from 'screens/WalletScreen';
+import SettingScreen from 'screens/SettingScreen';
+import EnergyScreen from 'screens/EnergyScreen';
 
 type BottomTabParamList = {
     Home: undefined;
-    Lounge: undefined;
-    Profile: undefined;
+    Wallet: undefined;
+    Setting: undefined;
+    Energy: undefined;
 }
 
 type IBottomTabNavigatorProps = {}
@@ -28,8 +30,9 @@ const BottomTabNavigator = (props: IBottomTabNavigatorProps) => {
             tabBar={CustomBottomTabs}
             screenOptions={{ headerShown: false }}>
             <Tab.Screen name="Home" component={HomeScreen} />
-            <Tab.Screen name="Lounge" component={LoungeScreen} />
-            <Tab.Screen name="Profile" component={ProfileScreen} />
+            <Tab.Screen name="Wallet" component={WalletScreen} />
+            <Tab.Screen name="Setting" component={SettingScreen} />
+            <Tab.Screen name="Energy" component={EnergyScreen} />
         </Tab.Navigator>
     )
 }

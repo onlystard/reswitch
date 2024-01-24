@@ -7,27 +7,24 @@ export default StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginHorizontal: wp(`${getPercentWidth(30)}%`),
-        paddingVertical: hp(`${getPercentHeight(30)}%`),
+        marginHorizontal: hp(`${getPercentHeight(30)}%`),
+        paddingVertical: wp(`${getPercentWidth(30)}%`),
         position: 'absolute',
         bottom: 20,
         left: 0,
         right: 0,
     },
-    paginationContainer: {
-        flexDirection: 'row',
-        height: hp(`${getPercentHeight(40)}%`),
+    containerCustomButton: {
+        backgroundColor: Colors.LINEAR_G6,
+        padding: hp(`${getPercentHeight(10)}%`),
+        borderRadius: 100,
         justifyContent: 'center',
         alignItems: 'center',
+        overflow: 'hidden',
     },
-    dots: {
-        height: hp(`${getPercentHeight(10)}%`),
-        marginHorizontal: wp(`${getPercentWidth(10)}%`),
-        borderRadius: 5,
-    },
-    containerCustomButton: {
-        backgroundColor: Colors.PURPLE,
-        padding: 10,
+    containerCustomButtonLinearGradient: {
+        backgroundColor: Colors.LINEAR_G6,
+        padding: hp(`${getPercentHeight(2)}%`),
         borderRadius: 100,
         justifyContent: 'center',
         alignItems: 'center',
@@ -43,31 +40,31 @@ export default StyleSheet.create({
     },
     itemContainer: {
         flex: 1,
+        justifyContent: 'space-around',
         alignItems: 'center',
+        marginBottom: hp(`${getPercentHeight(120)}%`),
     },
     itemText: {
-        marginTop: hp(`${getPercentHeight(12)}%`),
-        color: Colors.BLACK,
-        textAlign: 'left',
-        fontSize: getFontSize(fontsCommon.font18),
-        fontWeight: '700',
-    },
-    textDescription: {
-        marginTop: hp(`${getPercentHeight(8)}%`),
-        textAlign: 'left',
+        textAlign: 'center',
+        fontSize: getFontSize(fontsCommon.font38),
+        fontWeight: 'bold',
+        marginBottom: hp(`${getPercentHeight(10)}%`),
+        marginHorizontal: wp(`${getPercentWidth(20)}%`),
     },
     circleContainer: {
         ...StyleSheet.absoluteFillObject,
         alignItems: 'center',
         justifyContent: 'flex-end',
     },
-    viewText: {
-        flex: 1,
-        marginHorizontal: wp(`${getPercentWidth(16)}%`),
-        height: '75%',
-        position: 'absolute',
-        alignItems: 'flex-start',
-        justifyContent: 'flex-end',
-        color: Colors.TEXT_OPACITY_70
-    }
+    paginationContainer: {
+        flexDirection: 'row',
+        height: hp(`${getPercentHeight(40)}%`),
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    dots: {
+        height: hp(`${getPercentHeight(10)}%`),
+        marginHorizontal: wp(`${getPercentWidth(10)}%`),
+        borderRadius: 5,
+    },
 })
