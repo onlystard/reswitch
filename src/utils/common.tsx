@@ -1,18 +1,14 @@
 
-import { Alert, Dimensions, Linking } from 'react-native';
+import { Dimensions, Linking } from 'react-native';
 import { PersistConfig } from 'redux-persist';
 import { showMessage, MessageType } from 'react-native-flash-message';
 import { IAction, IActionCallBack, INavigationAction, INotifyMessage } from "interfaces/sagas/common";
 import { ReducerStatus } from 'interfaces/sagas/reducer';
 
-import uuid from 'react-native-uuid'
-import globalStyles from 'styles';
 import { FAILURE, SUCCESS } from 'redux/action-type-utils';
 import { ILinkingGlobalProps } from 'interfaces/Linking';
-import { EProductInfo } from './EnumGlobal';
 // import Loader from 'components/Loader';
 
-// Redux
 export type SagaAction<T> = (
   payload: T,
   showMessage?: INotifyMessage,
@@ -47,15 +43,6 @@ export function generateAction<T>(type: string): SagaAction<T> {
   return result;
 }
 
-// Generate with your own error data
-// export function logger(type: string, message: string, stackTrace: string) {
-//   const properties = { username: 'C123456' };
-
-//   const exceptionModel = ExceptionModel.createFromTypeAndMessage(type, message, stackTrace);
-
-//   Crashes.trackError(exceptionModel, properties);
-// }
-
 // Show Message
 export function alertMessage(type: MessageType, message: string, description?: string) {
   showMessage(
@@ -77,7 +64,6 @@ export const wait = (timeout: number) => {
   return new Promise((resolve: any) => setTimeout(resolve, timeout));
 }
 
-export const uidGlobal = uuid.v4()
 export const NOOP: any = () => {
   // TODO: something
 }
@@ -138,15 +124,6 @@ export function getWidth() {
 //   );
 // };
 
-
-export const getRandomColor = () => {
-  const r = Math.floor(Math.random() * 256)
-  const g = Math.floor(Math.random() * 256)
-  const b = Math.floor(Math.random() * 256)
-
-  return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`
-}
-
 export const LinkingGlobal = (
   { mailTo, tel, sms, url }: ILinkingGlobalProps,
   callBack?: () => void
@@ -191,81 +168,5 @@ export const getFeatureViewAnimation = (animatedValue: any, outputX: number) => 
   };
 };
 
-export function formatCurrency(number: number | string) {
-  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' vnđ';
-}
-
-export function extractDigitsWithUnit(inputNumber: number) {
-  if (inputNumber < 0) {
-    return 'Input must be a non-negative number';
-  }
-
-  const inputString = inputNumber.toString();
-  let numberOfDigits;
-  let unit;
-
-  if (inputNumber >= 10000000) {
-    numberOfDigits = 2;
-    unit = 'Triệu';
-  } else if (inputNumber >= 1000000) {
-    numberOfDigits = 1;
-    unit = 'Triệu';
-  } else if (inputNumber >= 1000) {
-    numberOfDigits = 3;
-    unit = 'Nghìn';
-  } else {
-    numberOfDigits = inputString.length;
-    unit = '';
-  }
-
-  const extractedNumber = parseInt(inputString.substring(0, numberOfDigits));
-  const remainingNumber = parseInt(inputString.substring(numberOfDigits));
-
-  let result = extractedNumber.toString();
-  if (unit !== '' && remainingNumber > 0) {
-    result += ` ${unit} ${remainingNumber}`;
-  } else if (unit !== '') {
-    result += ` ${unit}`;
-  }
-
-  return result.replace(/(\.0+|(?<=\d)0+)$/g, '');
-}
-
-export const getFormattedInfo = (item: any) => {
-  switch (item?.title) {
-    case EProductInfo.TOTAL_AMOUNT:
-      return formatCurrency(item?.info);
-    case EProductInfo.DAY_GOP_HUI:
-      return `${item?.info} / 1 lần`;
-    default:
-      return item?.info;
-  }
-};
-
-export function numberWithCommas(x: any) {
-  if (x == undefined) {
-    return 0
-  } else {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
-  }
-}
-
-export function formatPhoneNumber(phoneNumber: string) {
-  const cleanedNumber = phoneNumber.replace(/\D/g, '');
-
-  if (!/^\d+$/.test(cleanedNumber)) {
-    return "Invalid phone number format";
-  }
-
-  if (cleanedNumber.startsWith('0')) {
-    return "+84" + cleanedNumber.slice(1);
-  } else if (cleanedNumber.startsWith('84')) {
-    return "+" + cleanedNumber;
-  } else if (cleanedNumber.startsWith('+84')) {
-    return cleanedNumber;
-  } else {
-    return "Invalid country code";
-  }
-}
 
 

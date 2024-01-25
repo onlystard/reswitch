@@ -79,66 +79,41 @@ export const fontsCommon: any = {
 }
 
 export const FontFamilyGlobal: any = {
-    PoppinsBlack: 'Poppins-Black',
-    PoppinsBlackItalic: 'Poppins-BlackItalic',
-    PoppinsBold: 'Poppins-Bold',
-    PoppinsBoldItalic: 'Poppins-BoldItalic',
-    PoppinsExtraBold: 'Poppins-ExtraBold',
-    PoppinsExtraBoldItalic: 'Poppins-ExtraBoldItalic',
-    PoppinsExtraLight: 'Poppins-ExtraLight',
-    PoppinsExtraLightItalic: 'Poppins-ExtraLightItalic',
-    PoppinsItalic: 'Poppins-Italic',
-    PoppinsLight: 'Poppins-Light',
-    PoppinsLightItalic: 'Poppins-LightItalic',
-    PoppinsMedium: 'Poppins-Medium',
-    PoppinsMediumItalic: 'Poppins-MediumItalic',
-    PoppinsRegular: 'Poppins-Regular',
-    PoppinsSemiBold: 'Poppins-SemiBold',
-    PoppinsSemiBoldItalic: 'Poppins-SemiBoldItalic',
-    PoppinsThin: 'Poppins-Thin',
-    PoppinsThinItalic: 'Poppins-ThinItalic',
+    // PoppinsBlack: 'Poppins-Black',
+    // PoppinsBlackItalic: 'Poppins-BlackItalic',
+    // PoppinsBold: 'Poppins-Bold',
+    // PoppinsBoldItalic: 'Poppins-BoldItalic',
+    // PoppinsExtraBold: 'Poppins-ExtraBold',
+    // PoppinsExtraBoldItalic: 'Poppins-ExtraBoldItalic',
+    // PoppinsExtraLight: 'Poppins-ExtraLight',
+    // PoppinsExtraLightItalic: 'Poppins-ExtraLightItalic',
+    // PoppinsItalic: 'Poppins-Italic',
+    // PoppinsLight: 'Poppins-Light',
+    // PoppinsLightItalic: 'Poppins-LightItalic',
+    // PoppinsMedium: 'Poppins-Medium',
+    // PoppinsMediumItalic: 'Poppins-MediumItalic',
+    // PoppinsRegular: 'Poppins-Regular',
+    // PoppinsSemiBold: 'Poppins-SemiBold',
+    // PoppinsSemiBoldItalic: 'Poppins-SemiBoldItalic',
+    // PoppinsThin: 'Poppins-Thin',
+    // PoppinsThinItalic: 'Poppins-ThinItalic',
 }
 
 export const Colors = {
     WHITE: '#FFFFFF',
-    HAPPY_PINK: '#EF3167',
-    RED: '#ED0033',
     BLACK: '#000000',
-    GRAY: '#808080',
-    BLUE: '#17C8FF',
-    DARK_BLUE: '#050A30',
-    YELLOW: '#fdc80f',
-    PURPLE: '#8000FF',
-    GREEN: '#32CD32',
-    //
+    PURPLE: '#6837E3',
+    PURPLE_BUTTON: '#9D7EED',
+    PURPLE_OPACITY_70: '#E3D9FA',
+    RED: '#EF476F',
+
     BG_ALPHA_WHITE: 'rgba(255, 255, 255, 0.6)',
     BG_ALPHA_WHITE_8: 'rgba(255, 255, 255, 0.8)',
     BG_ALPHA_BLACK: 'rgba(0, 0, 0, 0.3)',
     BACKGROUND_MODAL: 'rgba(6, 13, 45, 0.8)',
-    BG_ALPHA_PINK: 'rgb(255, 213, 223)',
-    //
-    // LINEAR_G1: '#00FFFF',
-    // LINEAR_G2: '#17C8FF',
-    // LINEAR_G3: '#329BFF',
-    // LINEAR_G4: '#4C64FF',
-    // LINEAR_G5: '#6536FF',
-    // LINEAR_G6: '#8000FF'
-    // Royal Blue and Gold Color Palette
-    LINEAR_G1: '#000C66',
-    LINEAR_G2: '#1f009e',
-    LINEAR_G3: '#0504aa',
-    LINEAR_G4: '#8b6508',
-    LINEAR_G5: '#b8860b',
-    LINEAR_G6: '#cd950c',
-    LINEAR_G7: '#eead0e',
-    LINEAR_G8: '#F5BD02'
-    //
-    // LINEAR_G1: '#F3D0DC',
-    // LINEAR_G2: '#FEC2D6',
-    // LINEAR_G3: '#F99DBC',
-    // LINEAR_G4: '#F36D9F',
-    // LINEAR_G5: '#F5347F',
-    // LINEAR_G6: '#f41c70'
+
+    TEXT_OPACITY_70: '#00000070',
+    TEXT_N9: '#717074'
 }
 
 const globalStyles = StyleSheet.create({
@@ -230,12 +205,6 @@ const globalStyles = StyleSheet.create({
     containerBackgroundWhite: {
         backgroundColor: Colors.WHITE,
     },
-    containerBackgroundPink: {
-        backgroundColor: Colors.DARK_BLUE,
-    },
-    containerBackgroundYellow: {
-        backgroundColor: Colors.LINEAR_G8,
-    },
     positionAbsolute: {
         position: 'absolute',
     },
@@ -310,29 +279,10 @@ const globalStyles = StyleSheet.create({
         backgroundColor: Colors.BACKGROUND_MODAL,
     },
     divider: {
-        backgroundColor: Colors.DARK_BLUE,
+        backgroundColor: Colors.BLACK,
         height: hp(`${getPercentHeight(0.2)}%`),
     },
-    shadowContainerBlue: {
-        shadowColor: Colors.LINEAR_G3,
-        shadowOffset: {
-            width: 1,
-            height: 5,
-        },
-        shadowOpacity: 0.35,
-        shadowRadius: 3.68,
-        elevation: Platform.isAndroid ? 2 : 5,
-    },
-    shadowContainerPink: {
-        shadowColor: Colors.LINEAR_G8,
-        shadowOffset: {
-            width: 1,
-            height: 5,
-        },
-        shadowOpacity: 0.35,
-        shadowRadius: 3.68,
-        elevation: Platform.isAndroid ? 2 : 5,
-    },
+
     shadowContainerWhite: {
         shadowColor: Colors.WHITE,
         shadowOffset: {
@@ -344,21 +294,21 @@ const globalStyles = StyleSheet.create({
         elevation: Platform.isAndroid ? 2 : 5,
     },
     textStandardFont12: {
-        color: Colors.LINEAR_G1,
+        color: Colors.BLACK,
         fontWeight: '300',
         fontStyle: 'normal',
         fontSize: getFontSize(fontsCommon.font12),
         // fontFamily: FontFamilyGlobal.PoppinsMedium,
     },
     textStandardFont14: {
-        color: Colors.LINEAR_G1,
+        color: Colors.BLACK,
         fontWeight: '400',
         fontStyle: 'normal',
         fontSize: getFontSize(fontsCommon.font14),
         // fontFamily: FontFamilyGlobal.PoppinsMedium,
     },
     textStandardFont16: {
-        color: Colors.LINEAR_G1,
+        color: Colors.BLACK,
         fontWeight: '500',
         fontStyle: 'normal',
         fontSize: getFontSize(fontsCommon.font16),
@@ -366,9 +316,3 @@ const globalStyles = StyleSheet.create({
     },
 })
 export default globalStyles
-
-export const ImagesNative = {
-    CardVisaBg: { uri: 'cardvisabg' },
-    CardChipIcon: { uri: 'cardchipicon' },
-    VisaText: { uri: 'visatext' },
-}

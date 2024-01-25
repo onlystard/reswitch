@@ -3,8 +3,8 @@ import { View } from 'react-native';
 import { Colors } from 'styles';
 
 import HomeIcon from '../../../../assets/icon/IconHomeBottom.svg';
-import LoungeIcon from '../../../../assets/icon/IconMenuBottom.svg';
-import ProfileIcon from '../../../../assets/icon/IconProfileBottom.svg';
+import LoungeIcon from '../../../../assets/icon/IconHomeBottom.svg';
+import ProfileIcon from '../../../../assets/icon/IconHomeBottom.svg';
 
 interface Props {
     route: string;
