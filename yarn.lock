@@ -2223,6 +2223,14 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.11.tgz#2596fb352ee96a1379c657734d4b913a613ad563"
   integrity sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==
 
+"@types/react-native-check-box@^2.1.6":
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/@types/react-native-check-box/-/react-native-check-box-2.1.6.tgz#f17967892b633eca51b3b1efd5364d406ceb8a0e"
+  integrity sha512-3VHwhbJ7UhzTMpIPghAd5plG0qxjFCPQ8Cq4MQvWwjcHKMpi79cvnaOpfI/r7spWPGE0VN16Sqj9/KSswXyQmA==
+  dependencies:
+    "@types/react" "*"
+    react-native "*"
+
 "@types/react-test-renderer@^18.0.0":
   version "18.0.7"
   resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-18.0.7.tgz#2cfe657adb3688cdf543995eceb2e062b5a68728"
@@ -5928,7 +5936,7 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.5.7, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -6001,6 +6009,13 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+
+react-native-check-box@^2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/react-native-check-box/-/react-native-check-box-2.1.7.tgz#f349d3505a13c15d19949ec4cec40c7adc4f3626"
+  integrity sha512-dPVOoz4jKs2je2HSHp7+XJXNyZFq8Kij7IHutigrQKzB550Dko6ZAQu/1mG1FzdUMFxxkZ2nX59KmbR0Co0T8Q==
+  dependencies:
+    prop-types "^15.5.7"
 
 react-native-dotenv@^3.4.9:
   version "3.4.9"
@@ -6084,7 +6099,7 @@ react-native-splash-screen@^3.3.0:
   resolved "https://registry.yarnpkg.com/react-native-splash-screen/-/react-native-splash-screen-3.3.0.tgz#3af71ed17afe50fee69590a45aec399d071ead02"
   integrity sha512-rGjt6HkoSXxMqH4SQUJ1gnPQlPJV8+J47+4yhgTIan4bVvAwJhEeJH7wWt9hXSdH4+VfwTS0GTaflj1Tw83IhA==
 
-react-native-svg-transformer@^1.2.0:
+react-native-svg-transformer@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/react-native-svg-transformer/-/react-native-svg-transformer-1.3.0.tgz#ef01cdd82c1fc0611dd91950457b61cf74c4df3a"
   integrity sha512-SV92uRjENDuanHLVuLy2Sdvt6f8vu7qnG8vC9CwBiAXV0BpWN4/wPvfc+r2WPAkcctRZLLOvrGnGA2o8nZd0cg==
@@ -6102,7 +6117,7 @@ react-native-svg@^14.1.0:
     css-select "^5.1.0"
     css-tree "^1.1.3"
 
-react-native@0.73.2:
+react-native@*, react-native@0.73.2:
   version "0.73.2"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.73.2.tgz#74ee163c8189660d41d1da6560411da7ce41a608"
   integrity sha512-7zj9tcUYpJUBdOdXY6cM8RcXYWkyql4kMyGZflW99E5EuFPoC7Ti+ZQSl7LP9ZPzGD0vMfslwyDW0I4tPWUCFw==

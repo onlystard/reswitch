@@ -5,7 +5,9 @@ enum EScreenName {
     HomeScreen = 'HomeScreen',
     WalletScreen = 'WalletScreen',
     SettingScreen = 'SettingScreen',
-    EnergyScreen = 'EnergyScreen'
+    EnergyScreen = 'EnergyScreen',
+    RegisterScreen = 'RegisterScreen',
+    VerifyEmailScreen = 'VerifyEmailScreen'
 }
 
 export { EScreenName }

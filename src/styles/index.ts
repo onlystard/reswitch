@@ -103,13 +103,17 @@ export const Colors = {
     WHITE: '#FFFFFF',
     BLACK: '#000000',
     PURPLE: '#6837E3',
+    PURPLE_BUTTON: '#9D7EED',
+    PURPLE_OPACITY_70: '#E3D9FA',
+    RED: '#EF476F',
 
     BG_ALPHA_WHITE: 'rgba(255, 255, 255, 0.6)',
     BG_ALPHA_WHITE_8: 'rgba(255, 255, 255, 0.8)',
     BG_ALPHA_BLACK: 'rgba(0, 0, 0, 0.3)',
     BACKGROUND_MODAL: 'rgba(6, 13, 45, 0.8)',
 
-    TEXT_OPACITY_70: '#00000070'
+    TEXT_OPACITY_70: '#00000070',
+    TEXT_N9: '#717074'
 }
 
 const globalStyles = StyleSheet.create({

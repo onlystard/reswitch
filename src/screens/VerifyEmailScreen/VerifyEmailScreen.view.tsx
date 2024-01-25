@@ -1,18 +1,19 @@
 import { memo } from 'react'
 import { View } from 'react-native'
-import { ILoginScreenProps } from './LoginScreen.type'
-import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen'
 import { ScreenNames } from 'routes/screenName'
+import { IVerifyEmailScreenProps } from './VerifyEmailScreen.type'
+import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen'
 
 import globalStyles, { getPercentHeight, getPercentWidth } from 'styles'
-import ModulesLoginView from './components/ModulesLoginView'
+import ModulesOTPView from './components/ModulesOTPView'
 
 import IconLogo from '../../../assets/icon/logo-reswitch.svg'
 
-const LoginScreen = (props: ILoginScreenProps) => {
-    const handleNavigationRegister = () => {
-        props.navigation.navigate(ScreenNames.screenNames.RegisterScreen);
+const VerifyEmailScreen = (props: IVerifyEmailScreenProps) => {
+    const handleNavigationSignIn = () => {
+        props.navigation.navigate(ScreenNames.screenNames.LoginScreen);
     }
+
     return (
         <View style={[globalStyles.container, globalStyles.containerBackgroundWhite, globalStyles.justifySpaceEvenly, globalStyles.alignCenter]}>
             <View>
@@ -22,11 +23,11 @@ const LoginScreen = (props: ILoginScreenProps) => {
                     height={hp(`${getPercentHeight(30)}%`)}
                 />
             </View>
-            <ModulesLoginView
-                onPressRegister={handleNavigationRegister}
+            <ModulesOTPView
+                onPressSignIn={handleNavigationSignIn}
             />
         </View>
-    );
-};
+    )
+}
 
-export default memo(LoginScreen)
+export default memo(VerifyEmailScreen)

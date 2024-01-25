@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen'
-import { Colors, getPercentHeight, getPercentWidth } from 'styles'
+import { Colors, fontsCommon, getFontSize, getPercentHeight, getPercentWidth } from 'styles'
 
 export default StyleSheet.create({
     viewInput: {
@@ -15,7 +15,7 @@ export default StyleSheet.create({
         marginHorizontal: wp(`${getPercentWidth(16)}%`),
     },
     containerCreateAccount: {
-        marginTop: hp(`${getPercentHeight(50)}%`),
+        marginTop: hp(`${getPercentHeight(18)}%`),
         marginHorizontal: wp(`${getPercentWidth(16)}%`),
     },
     CheckBox: {
@@ -29,4 +29,22 @@ export default StyleSheet.create({
         fontWeight: '700',
         color: Colors.PURPLE
     },
+    viewTerms: {
+        marginTop: hp(`${getPercentHeight(18)}%`),
+        marginHorizontal: wp(`${getPercentWidth(16)}%`),
+    },
+    textInfo: {
+        fontWeight: '600',
+        color: Colors.TEXT_N9
+    },
+    textInfoHeader: {
+        marginTop: hp(`${getPercentHeight(18)}%`),
+        marginHorizontal: wp(`${getPercentWidth(16)}%`),
+        marginVertical: hp(`${getPercentHeight(18)}%`),
+    },
+    textOTP: {
+        fontWeight: '700',
+        color: Colors.PURPLE,
+        fontSize: getFontSize(fontsCommon.font24),
+    }
 })
