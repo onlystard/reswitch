@@ -11,9 +11,10 @@ import CustomButton from 'components/CustomButton';
 
 type IModulesLoginViewProps = {
     onPressRegister: () => void
+    onPressForgot: () => void
 }
 
-const ModulesLoginView = ({ onPressRegister }: IModulesLoginViewProps) => {
+const ModulesLoginView = ({ onPressRegister, onPressForgot }: IModulesLoginViewProps) => {
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [isAgree, setIsAgree] = useState<boolean>(false);
@@ -46,7 +47,9 @@ const ModulesLoginView = ({ onPressRegister }: IModulesLoginViewProps) => {
                         {"Remember Me"}
                     </Text>
                 </View>
-                <Text style={[globalStyles.textStandardFont12, styles.textForgot]}>{"Forgot password ?"}</Text>
+                <TouchableOpacity onPress={onPressForgot}>
+                    <Text style={[globalStyles.textStandardFont12, styles.textForgot]}>{"Forgot password ?"}</Text>
+                </TouchableOpacity>
             </View>
             <View style={[styles.containerViewForgot]}>
                 <CustomButton

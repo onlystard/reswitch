@@ -1,5 +1,10 @@
 import { IAction, IActionCallBack, INavigationAction, INotifyMessage } from "interfaces/sagas/common"
 
+export interface IResendOtpParams {
+  readonly phoneNumber: string
+  readonly password: string
+}
+
 export interface IUidTokenReducer {
   readonly success?: boolean
   readonly message?: string

@@ -13,6 +13,10 @@ const LoginScreen = (props: ILoginScreenProps) => {
     const handleNavigationRegister = () => {
         props.navigation.navigate(ScreenNames.screenNames.RegisterScreen);
     }
+    const handleNavigationForgetPassword = () => {
+        props.navigation.navigate(ScreenNames.screenNames.ForgetPasswordScreen);
+    }
+
     return (
         <View style={[globalStyles.container, globalStyles.containerBackgroundWhite, globalStyles.justifySpaceEvenly, globalStyles.alignCenter]}>
             <View>
@@ -24,6 +28,7 @@ const LoginScreen = (props: ILoginScreenProps) => {
             </View>
             <ModulesLoginView
                 onPressRegister={handleNavigationRegister}
+                onPressForgot={handleNavigationForgetPassword}
             />
         </View>
     );

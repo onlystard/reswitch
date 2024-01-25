@@ -1,17 +1,18 @@
 import { memo } from 'react'
 import { View } from 'react-native'
 import { ScreenNames } from 'routes/screenName'
-import { IVerifyEmailScreenProps } from './VerifyEmailScreen.type'
+import { IResetPasswordScreenProps } from './ResetPasswordScreen.type'
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen'
 
 import globalStyles, { getPercentHeight, getPercentWidth } from 'styles'
-import ModulesOTPView from './components/ModulesOTPView'
 
 import IconLogo from '../../../assets/icon/logo-reswitch.svg'
+import ModulesResetPasswordView from './components/ModulesResetPasswordView'
 
-const VerifyEmailScreen = (props: IVerifyEmailScreenProps) => {
+const ResetPasswordScreen = (props: IResetPasswordScreenProps) => {
+
     const handleNavigationSignIn = () => {
-        props.navigation.navigate(ScreenNames.screenNames.ResetPasswordScreen);
+        props.navigation.navigate(ScreenNames.screenNames.LoginScreen);
     }
 
     return (
@@ -23,9 +24,11 @@ const VerifyEmailScreen = (props: IVerifyEmailScreenProps) => {
                     height={hp(`${getPercentHeight(30)}%`)}
                 />
             </View>
-            <ModulesOTPView onPressButtonOTP={handleNavigationSignIn} />
+            <ModulesResetPasswordView
+                onPressButton={handleNavigationSignIn}
+            />
         </View>
     )
 }
 
-export default memo(VerifyEmailScreen)
+export default memo(ResetPasswordScreen)

@@ -8,12 +8,16 @@ import OnboardingScreen from 'screens/OnboardingScreen';
 import LoginScreen from 'screens/LoginScreen';
 import RegisterScreen from 'screens/RegisterScreen';
 import VerifyEmailScreen from 'screens/VerifyEmailScreen';
+import ForgetPasswordScreen from 'screens/ForgetPasswordScreen';
+import ResetPasswordScreen from 'screens/ResetPasswordScreen';
 
 export type IAuthNavigatorProps = {
   readonly OnboardingScreen: undefined;
   readonly LoginScreen: undefined;
   readonly RegisterScreen: undefined
   readonly VerifyEmailScreen: undefined
+  readonly ForgetPasswordScreen: undefined
+  readonly ResetPasswordScreen: undefined
 }
 
 type INavigationProps = {}
@@ -49,6 +53,16 @@ const AuthNavigator = (props: INavigationProps) => {
       <Stack.Screen
         name={ScreenNames.screenNames.VerifyEmailScreen}
         component={VerifyEmailScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={ScreenNames.screenNames.ForgetPasswordScreen}
+        component={ForgetPasswordScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={ScreenNames.screenNames.ResetPasswordScreen}
+        component={ResetPasswordScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator >
