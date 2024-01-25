@@ -1,19 +1,22 @@
-import { memo } from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { memo, useState } from 'react'
+import { View, Text } from 'react-native'
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen'
 
 import globalStyles, { getPercentHeight, getPercentWidth } from 'styles'
 import styles from '../styles'
 
 import CustomButton from 'components/CustomButton'
+import CustomOTP from 'components/CustomOTP'
+
 import IconLockOTP from '../../../../assets/icon/Icon-LockOTP.svg'
 
 type IModulesOTPViewProps = {
-    onPressSignIn: () => void
+    onPressButtonOTP: () => void
 }
 
-const ModulesOTPView = ({ onPressSignIn }: IModulesOTPViewProps) => {
-
+const ModulesOTPView = ({ onPressButtonOTP }: IModulesOTPViewProps) => {
+    const [getOtp, setGetOtp] = useState<string>('')
+    const [getPhoneNumber, setGetPhoneNumber] = useState<string>('')
 
     return (
         <View style={[globalStyles.fillWidth]}>
@@ -28,20 +31,13 @@ const ModulesOTPView = ({ onPressSignIn }: IModulesOTPViewProps) => {
                     <Text style={[globalStyles.textStandardFont12, styles.textInfo]}>{"We have sent you an authentication code to you mobile number sarah@mail.com"}</Text>
                 </View>
             </View>
-
-
-
-
-            <View style={[styles.viewTerms, globalStyles.flexDirectionRow, globalStyles.alignCenter]}>
-                <Text style={[globalStyles.textStandardFont12, styles.textRemember]}>{"Did not receive OTP ? "}</Text>
-                <TouchableOpacity onPress={onPressSignIn} >
-                    <Text style={[globalStyles.textStandardFont12, styles.textForgot]}>{"Resend"}</Text>
-                </TouchableOpacity>
+            <View style={[styles.viewTerms, globalStyles.alignCenter]}>
+                <CustomOTP setPhoneNumber={getPhoneNumber} OTPValue={(values: string) => setGetOtp(values)} />
             </View>
             <View style={[styles.containerViewForgot]}>
                 <CustomButton
                     title='Confirm Number'
-                    onPressButton={() => console.log('Login')}
+                    onPressButton={onPressButtonOTP}
                     isDisabled={false}
                 />
             </View>

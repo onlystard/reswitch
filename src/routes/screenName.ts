@@ -7,7 +7,9 @@ enum EScreenName {
     SettingScreen = 'SettingScreen',
     EnergyScreen = 'EnergyScreen',
     RegisterScreen = 'RegisterScreen',
-    VerifyEmailScreen = 'VerifyEmailScreen'
+    VerifyEmailScreen = 'VerifyEmailScreen',
+    ForgetPasswordScreen = 'ForgetPasswordScreen',
+    ResetPasswordScreen = 'ResetPasswordScreen'
 }
 
 export { EScreenName }
